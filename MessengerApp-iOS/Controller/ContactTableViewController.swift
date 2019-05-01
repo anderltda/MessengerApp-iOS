@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import FirebaseFirestore
-import FirebaseCore
-import FirebaseAuth
 import Firebase
 
 class ContactTableViewController: UITableViewController {

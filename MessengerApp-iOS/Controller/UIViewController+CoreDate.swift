@@ -9,10 +9,6 @@
 import UIKit
 import CoreData
 import Firebase
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseAnalytics
-import FirebaseAuth
 
 extension UIViewController {
     

@@ -31,6 +31,9 @@
 		71D52C192276A8C7003415DD /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0E2276A8C7003415DD /* TalkTableViewCell.swift */; };
 		71D52C1A2276A8C7003415DD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0F2276A8C7003415DD /* AboutViewController.swift */; };
 		71D52C1B2276A8C7003415DD /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C102276A8C7003415DD /* LocationViewController.swift */; };
+		71D98075227A1C0C0055FD08 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D98074227A1C0C0055FD08 /* AddressModel.swift */; };
+		71D98077227A1D690055FD08 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D98076227A1D690055FD08 /* MapsViewController.swift */; };
+		71D98079227A1DB90055FD08 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D98078227A1DB90055FD08 /* LocationTableViewCell.swift */; };
 		8978C888F58D7046726EAC03 /* Pods_MessengerApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B96CEB90D4A78A46956DF77 /* Pods_MessengerApp_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		71D52C0E2276A8C7003415DD /* TalkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
 		71D52C0F2276A8C7003415DD /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		71D52C102276A8C7003415DD /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		71D98074227A1C0C0055FD08 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		71D98076227A1D690055FD08 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		71D98078227A1DB90055FD08 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		8B4C5E56238DF2D1058FE5D9 /* Pods-MessengerApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessengerApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MessengerApp-iOS/Pods-MessengerApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9B96CEB90D4A78A46956DF77 /* Pods_MessengerApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessengerApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +132,7 @@
 			children = (
 				71D52C002276A1FD003415DD /* ChatModel.swift */,
 				71CDDFC422791464001FFCA1 /* UserModel.swift */,
+				71D98074227A1C0C0055FD08 /* AddressModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +156,8 @@
 				7166CF9422740E7200AF0C77 /* ViewController.swift */,
 				71D52C022276A71A003415DD /* TalkTableViewCell.swift */,
 				71CDDFC222790B45001FFCA1 /* UIViewController+CoreDate.swift */,
+				71D98076227A1D690055FD08 /* MapsViewController.swift */,
+				71D98078227A1DB90055FD08 /* LocationTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +310,7 @@
 				7166CF9522740E7200AF0C77 /* ViewController.swift in Sources */,
 				71D52C142276A8C7003415DD /* ContactViewController.swift in Sources */,
 				71D52BFA22769FFB003415DD /* MainTabBarController.swift in Sources */,
+				71D98075227A1C0C0055FD08 /* AddressModel.swift in Sources */,
 				71D52C012276A1FD003415DD /* ChatModel.swift in Sources */,
 				7166CF9B22740E7200AF0C77 /* MessengerApp_iOS.xcdatamodeld in Sources */,
 				71D52C1B2276A8C7003415DD /* LocationViewController.swift in Sources */,
@@ -314,8 +324,10 @@
 				71BA193E2274BD0400DF4AC0 /* ContactTableViewController.swift in Sources */,
 				71D52C182276A8C7003415DD /* SettingViewController.swift in Sources */,
 				71D52C162276A8C7003415DD /* MainTabBarController.swift in Sources */,
+				71D98079227A1DB90055FD08 /* LocationTableViewCell.swift in Sources */,
 				71CDDFC522791464001FFCA1 /* UserModel.swift in Sources */,
 				71D52C132276A8C7003415DD /* TalkViewController.swift in Sources */,
+				71D98077227A1D690055FD08 /* MapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

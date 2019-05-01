@@ -8,10 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseAnalytics
-import FirebaseAuth
 
 class TalkViewController: UIViewController {
     
@@ -22,6 +18,7 @@ class TalkViewController: UIViewController {
     var chatModelList: [ChatModel] = []
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tfMessage: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,16 +66,19 @@ class TalkViewController: UIViewController {
         tableView.reloadData()
     }
     
+    @IBAction func btSend(_ sender: UIButton) {
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+        guard let message = tfMessage.text else {return}
+        
+        firestore.collection(collection)
+            .addDocument(data: ["id" : uid,
+                                "message" : message,
+                                "time" : Date()])
+        
+        tfMessage.text = ""
+        
+    }
+    
     
 }
 
