@@ -48,10 +48,19 @@ class LocationViewController: UIViewController {
         
         for document in snapshot.documents {
             let data = document.data()
-            let id = (data["id"] as! String)
+            let id = data["id"] as! String
             let name = data["name"] as! String
+            let lat = data["lat"] as! Double
+            let long = data["long"] as! Double
+            let cep = data["cep"] as! String
+            let logradouro = data["logradouro"] as! String
+            let complemento = data["complemento"] as! String
+            let bairro = data["bairro"] as! String
+            let localidade = data["localidade"] as! String
+            let estado = data["estado"] as! String
+            let number = data["number"] as! String
             
-            let address = AddressModel(id: id, name: name)
+            let address = AddressModel(id: id, name: name, lat: lat, long: long, cep: cep, logradouro: logradouro, complemento: complemento, bairro: bairro, localidade: localidade, estado: estado, number: number)
             
             addressModelList.append(address)
         }
@@ -80,6 +89,16 @@ extension LocationViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let address = addressModelList[indexPath.row]
+        
+        let map = storyboard?.instantiateViewController(withIdentifier: "IdMapsViewController") as! MapsViewController
+        
+        map.prepare(with: address)
+        
+        navigationController?.pushViewController(map, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
         
     }
 }

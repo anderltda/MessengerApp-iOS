@@ -12,5 +12,14 @@ struct AddressModel : Codable {
     
     var id: String
     var name: String
+    var lat: Double
+    var long: Double
+    var cep: String
+    var logradouro: String
+    var complemento: String
+    var bairro: String
+    var localidade: String
+    var estado: String
+    var number: String
     
 }
