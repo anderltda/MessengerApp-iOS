@@ -9,9 +9,6 @@
 import UIKit
 import CoreData
 import Firebase
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseAnalytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
