@@ -508,12 +508,28 @@
                                     <action selector="btSalvar:" destination="TG8-90-JDU" eventType="touchUpInside" id="JC9-F8-E87"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CEP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-q2-LHC">
+                                <rect key="frame" x="20" y="389" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmQ-bp-lAi">
+                                <rect key="frame" x="211" y="389" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Seacrh"/>
+                                <connections>
+                                    <action selector="btBucarCep:" destination="TG8-90-JDU" eventType="touchUpInside" id="82N-gL-4UB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jWN-An-m3t"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="icon_profile" id="fyI-YB-fPh"/>
                     <connections>
+                        <outlet property="tfCep" destination="LHy-q2-LHC" id="Wjb-vM-wKq"/>
                         <outlet property="tfEmail" destination="mZ5-ET-wha" id="zML-JW-7nV"/>
                         <outlet property="tfFullName" destination="cew-xJ-Dqo" id="3ic-3u-n9n"/>
                         <outlet property="tfPhone" destination="Mzg-XZ-M1q" id="gfP-p6-GDx"/>
@@ -521,7 +537,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDQ-lM-0b1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3602.898550724638" y="557.8125"/>
+            <point key="canvasLocation" x="3602.4000000000001" y="557.27136431784118"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="dKq-Du-sz9">

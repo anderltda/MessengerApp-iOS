@@ -60,7 +60,18 @@ class LocationViewController: UIViewController {
             let estado = data["estado"] as! String
             let number = data["number"] as! String
             
-            let address = AddressModel(id: id, name: name, lat: lat, long: long, cep: cep, logradouro: logradouro, complemento: complemento, bairro: bairro, localidade: localidade, estado: estado, number: number)
+            let address = AddressModel()
+            address.id = id
+            address.name = name
+            address.lat = lat
+            address.long = long
+            address.cep = cep
+            address.logradouro = logradouro
+            address.complemento = complemento
+            address.bairro = bairro
+            address.localidade = localidade
+            address.uf = estado
+            address.number = number
             
             addressModelList.append(address)
         }

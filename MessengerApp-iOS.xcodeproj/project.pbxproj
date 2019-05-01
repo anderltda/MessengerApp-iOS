@@ -34,6 +34,7 @@
 		71D98075227A1C0C0055FD08 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D98074227A1C0C0055FD08 /* AddressModel.swift */; };
 		71D98077227A1D690055FD08 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D98076227A1D690055FD08 /* MapsViewController.swift */; };
 		71D98079227A1DB90055FD08 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D98078227A1DB90055FD08 /* LocationTableViewCell.swift */; };
+		71D9807C227A3BCD0055FD08 /* RESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D9807B227A3BCD0055FD08 /* RESTService.swift */; };
 		8978C888F58D7046726EAC03 /* Pods_MessengerApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B96CEB90D4A78A46956DF77 /* Pods_MessengerApp_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		71D98074227A1C0C0055FD08 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		71D98076227A1D690055FD08 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		71D98078227A1DB90055FD08 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		71D9807B227A3BCD0055FD08 /* RESTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTService.swift; sourceTree = "<group>"; };
 		8B4C5E56238DF2D1058FE5D9 /* Pods-MessengerApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessengerApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MessengerApp-iOS/Pods-MessengerApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9B96CEB90D4A78A46956DF77 /* Pods_MessengerApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessengerApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 		7166CF9122740E7200AF0C77 /* MessengerApp-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				71D9807A227A3BB60055FD08 /* Service */,
 				71D52BFE2276A1BA003415DD /* Controller */,
 				71D52BFD2276A197003415DD /* Model */,
 				7166CF9222740E7200AF0C77 /* AppDelegate.swift */,
@@ -160,6 +163,14 @@
 				71D52C022276A71A003415DD /* TalkTableViewCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		71D9807A227A3BB60055FD08 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				71D9807B227A3BCD0055FD08 /* RESTService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		B1CCCCD778DD75C533177AC9 /* Frameworks */ = {
@@ -316,6 +327,7 @@
 				71D52C1B2276A8C7003415DD /* LocationViewController.swift in Sources */,
 				71D52C172276A8C7003415DD /* ContactTableViewController.swift in Sources */,
 				71D52C122276A8C7003415DD /* ProfileViewController.swift in Sources */,
+				71D9807C227A3BCD0055FD08 /* RESTService.swift in Sources */,
 				7166CF9322740E7200AF0C77 /* AppDelegate.swift in Sources */,
 				71D52C152276A8C7003415DD /* ViewController.swift in Sources */,
 				71D52C032276A71A003415DD /* TalkTableViewCell.swift in Sources */,

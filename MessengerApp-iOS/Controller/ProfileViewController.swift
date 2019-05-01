@@ -14,6 +14,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tfFullName: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPhone: UITextField!
+    @IBOutlet weak var tfCep: UITextField!
+    
+    var address: AddressModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,15 +95,19 @@ class ProfileViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
+    @IBAction func btBucarCep(_ sender: UIButton) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        RESTService.buscarCep(cep: tfCep.text!) { (address) in
+            self.address = address
+            DispatchQueue.main.async {
+                self.tfFullName.text = self.address.logradouro
+            }
+        }
+
+
     }
-    */
+    
+    
 
 }
 
