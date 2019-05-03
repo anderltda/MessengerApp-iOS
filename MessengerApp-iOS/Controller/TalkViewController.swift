@@ -15,10 +15,10 @@ class TalkViewController: UIViewController {
   
     var firestoreListener: ListenerRegistration!
     
-    var chatModelList: [ChatModel] = []
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tfMessage: UITextField!
+    
+    var chatModelList: [ChatModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,14 +90,19 @@ extension TalkViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TalkTableViewCell
-        
+
         let chat = chatModelList[indexPath.row]
-    
-        cell.prepare(with: chat)
         
-        return cell
+        let me = tableView.dequeueReusableCell(withIdentifier: "me", for: indexPath) as! MeTableViewCell
+        let you = tableView.dequeueReusableCell(withIdentifier: "you", for: indexPath) as! YouTableViewCell
+
+        if chat.id == uid {
+            me.prepare(with: chat)
+            return me
+        } else {
+            you.prepare(with: chat)
+            return you
+        }
     }
     
 }

@@ -20,5 +20,9 @@ class MeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func prepare(with chat: ChatModel) {
+        
+    }
 
 }
