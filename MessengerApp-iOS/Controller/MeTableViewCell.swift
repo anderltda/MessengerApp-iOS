@@ -1,18 +1,15 @@
 //
-//  TalkTableViewCell.swift
+//  MeTableViewCell.swift
 //  MessengerApp-iOS
 //
-//  Created by Anderson Nascimento on 29/04/19.
+//  Created by Anderson Nascimento on 02/05/19.
 //  Copyright © 2019 anderltda. All rights reserved.
 //
 
 import UIKit
 
-class TalkTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var lbMessage: UILabel!
-    @IBOutlet weak var lbTime: UILabel!
-    
+class MeTableViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,8 +21,4 @@ class TalkTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func prepare(with chat: ChatModel) {
-       lbMessage.text = chat.message
-       lbTime.text = "10:29 PM"
-    }
 }
