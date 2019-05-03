@@ -30,7 +30,7 @@
 		71D52C152276A8C7003415DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0A2276A8C6003415DD /* ViewController.swift */; };
 		71D52C162276A8C7003415DD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0B2276A8C6003415DD /* MainTabBarController.swift */; };
 		71D52C172276A8C7003415DD /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0C2276A8C6003415DD /* ContactTableViewController.swift */; };
-		71D52C182276A8C7003415DD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0D2276A8C7003415DD /* SettingViewController.swift */; };
+		71D52C182276A8C7003415DD /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0D2276A8C7003415DD /* ExitViewController.swift */; };
 		71D52C1A2276A8C7003415DD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0F2276A8C7003415DD /* AboutViewController.swift */; };
 		71D52C1B2276A8C7003415DD /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C102276A8C7003415DD /* LocationViewController.swift */; };
 		71D98075227A1C0C0055FD08 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D98074227A1C0C0055FD08 /* AddressModel.swift */; };
@@ -67,7 +67,7 @@
 		71D52C0A2276A8C6003415DD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		71D52C0B2276A8C6003415DD /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		71D52C0C2276A8C6003415DD /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
-		71D52C0D2276A8C7003415DD /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		71D52C0D2276A8C7003415DD /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		71D52C0F2276A8C7003415DD /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		71D52C102276A8C7003415DD /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		71D98074227A1C0C0055FD08 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				71D52C0B2276A8C6003415DD /* MainTabBarController.swift */,
 				71D98076227A1D690055FD08 /* MapsViewController.swift */,
 				71D52C072276A8C6003415DD /* ProfileViewController.swift */,
-				71D52C0D2276A8C7003415DD /* SettingViewController.swift */,
+				71D52C0D2276A8C7003415DD /* ExitViewController.swift */,
 				71D52C062276A8C6003415DD /* SigninViewController.swift */,
 				71D52C082276A8C6003415DD /* TalkViewController.swift */,
 				71CDDFC222790B45001FFCA1 /* UIViewController+CoreDate.swift */,
@@ -341,7 +341,7 @@
 				71D52C1A2276A8C7003415DD /* AboutViewController.swift in Sources */,
 				71BA193E2274BD0400DF4AC0 /* ContactTableViewController.swift in Sources */,
 				71804FBA227BEB40008D07DC /* TalkTableViewCell.swift in Sources */,
-				71D52C182276A8C7003415DD /* SettingViewController.swift in Sources */,
+				71D52C182276A8C7003415DD /* ExitViewController.swift in Sources */,
 				71804FBE227BEBE8008D07DC /* MeTableViewCell.swift in Sources */,
 				71D52C162276A8C7003415DD /* MainTabBarController.swift in Sources */,
 				71D98079227A1DB90055FD08 /* LocationTableViewCell.swift in Sources */,
