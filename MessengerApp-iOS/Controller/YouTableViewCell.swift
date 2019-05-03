@@ -10,6 +10,11 @@ import UIKit
 
 class YouTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var ivAvatar: UIImageView!
+    @IBOutlet weak var vwYou: UIView!
+    @IBOutlet weak var lbMessage: UILabel!
+    @IBOutlet weak var lbTime: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,7 +27,10 @@ class YouTableViewCell: UITableViewCell {
     }
     
     func prepare(with chat: ChatModel) {
-
+        vwYou.layer.cornerRadius = 10
+        lbMessage.text = chat.message
+        lbTime.text = "11:46 PM"
     }
+
 
 }
