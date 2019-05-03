@@ -1,5 +1,5 @@
 //
-//  YouTableViewCell.swift
+//  TalkTableViewCell.swift
 //  MessengerApp-iOS
 //
 //  Created by Anderson Nascimento on 03/05/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YouTableViewCell: UITableViewCell {
+class TalkTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +21,8 @@ class YouTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func prepare(with chat: ChatModel) {
+        
+    }
+    
 }

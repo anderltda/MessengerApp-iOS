@@ -37,8 +37,6 @@ class ContactViewController: UIViewController {
                 
                 guard let snapshot = snapshot else {return}
                 
-                print("Total de mudanças: ", snapshot.documentChanges.count)
-                
                 if snapshot.metadata.isFromCache || snapshot.documentChanges.count > 0 {
                     self.showUsers(snapshot: snapshot)
                 }
@@ -58,9 +56,6 @@ class ContactViewController: UIViewController {
             let phone = data["phone"] as! String
             //let create = NSDate(timeIntervalSince1970: (data["create"] as! TimeInterval)/1000)
            // let update = NSDate(timeIntervalSince1970: (data["update"] as! TimeInterval)/1000)
-
-            print(data["create"])
-            print(data["update"])
             
             let user = UserModel(id: id, name: name, email: email, phone: phone)
             
@@ -102,18 +97,15 @@ extension ContactViewController: UITableViewDataSource {
         let talk = storyboard?.instantiateViewController(withIdentifier: "IdTalkViewController") as! TalkViewController
         
         navigationController?.pushViewController(talk, animated: true)
-        
-        print(user.name)
+
         tableView.deselectRow(at: indexPath, animated: true)
-        print("Entrou Aqui 0000")
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ContactTableViewCell
         let user = userModelList[indexPath.row]
-        cell.textLabel?.text = user.name
-        cell.detailTextLabel?.text = "\(user.phone)"
+        cell.prepare(with: user)
         return cell
     }
 

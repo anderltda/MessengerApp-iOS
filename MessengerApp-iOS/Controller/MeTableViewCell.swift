@@ -2,7 +2,7 @@
 //  MeTableViewCell.swift
 //  MessengerApp-iOS
 //
-//  Created by Anderson Nascimento on 02/05/19.
+//  Created by Anderson Nascimento on 03/05/19.
 //  Copyright © 2019 anderltda. All rights reserved.
 //
 

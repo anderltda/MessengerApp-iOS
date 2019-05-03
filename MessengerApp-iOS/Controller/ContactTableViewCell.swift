@@ -1,32 +1,32 @@
 //
-//  LocationTableViewCell.swift
+//  ContactTableViewCell.swift
 //  MessengerApp-iOS
 //
-//  Created by Anderson Nascimento on 01/05/19.
+//  Created by Anderson Nascimento on 03/05/19.
 //  Copyright © 2019 anderltda. All rights reserved.
 //
 
 import UIKit
 
-class LocationTableViewCell: UITableViewCell {
+class ContactTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ivAvatar: UIImageView!
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbDescription: UILabel!
+    @IBOutlet weak var lbTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func prepare(with user: UserModel) {
+        lbName.text = user.name
+        lbDescription.text = user.email
+        lbTime.text = "10:29 PM"
     }
 
-    func prepare(with address: AddressModel) {
-        lbName.text = address.name
-        lbDescription.text = address.logradouro
-    }
 }
