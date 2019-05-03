@@ -204,45 +204,49 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77V-Pa-qVx">
-                                                    <rect key="frame" x="73" y="11" width="250" height="25"/>
+                                                    <rect key="frame" x="73" y="18" width="220" height="19.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="250" id="74a-ZJ-puQ"/>
-                                                        <constraint firstAttribute="height" constant="25" id="V35-Dt-UlK"/>
+                                                        <constraint firstAttribute="width" constant="220" id="YX4-fg-Cam"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTq-Qq-bHU">
-                                                    <rect key="frame" x="73" y="39" width="237" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZK-GJ-BvG">
+                                                    <rect key="frame" x="300" y="11" width="60" height="52"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="237" id="IkF-CP-1OS"/>
+                                                        <constraint firstAttribute="width" constant="60" id="dfQ-2U-vUH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTq-Qq-bHU">
+                                                    <rect key="frame" x="73" y="36" width="220" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="220" id="tnK-Hl-mn3"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZK-GJ-BvG">
-                                                    <rect key="frame" x="331" y="29" width="29" height="14.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="OZK-GJ-BvG" firstAttribute="trailing" secondItem="i2o-nI-cu8" secondAttribute="trailingMargin" id="4n6-xw-Dd7"/>
-                                                <constraint firstItem="TTq-Qq-bHU" firstAttribute="top" secondItem="77V-Pa-qVx" secondAttribute="bottom" constant="3" id="7TS-dL-UUI"/>
-                                                <constraint firstAttribute="trailing" secondItem="TTq-Qq-bHU" secondAttribute="trailing" constant="65" id="B5i-aG-XA0"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="OZK-GJ-BvG" secondAttribute="bottom" constant="19.5" id="CDL-zH-Oum"/>
-                                                <constraint firstItem="OZK-GJ-BvG" firstAttribute="top" secondItem="i2o-nI-cu8" secondAttribute="topMargin" constant="18" id="ERe-uv-8UV"/>
+                                                <constraint firstItem="OZK-GJ-BvG" firstAttribute="leading" secondItem="77V-Pa-qVx" secondAttribute="trailing" constant="7" id="5Mz-RX-a0p"/>
                                                 <constraint firstItem="MLi-th-xej" firstAttribute="top" secondItem="i2o-nI-cu8" secondAttribute="topMargin" id="F86-cW-wd1"/>
-                                                <constraint firstAttribute="bottom" secondItem="TTq-Qq-bHU" secondAttribute="bottom" constant="9.5" id="Qcn-TJ-17E"/>
+                                                <constraint firstItem="TTq-Qq-bHU" firstAttribute="leading" secondItem="MLi-th-xej" secondAttribute="trailing" constant="8" id="Fmx-7G-yfU"/>
+                                                <constraint firstItem="OZK-GJ-BvG" firstAttribute="leading" secondItem="77V-Pa-qVx" secondAttribute="trailing" constant="7" id="Gyf-4M-g2Q"/>
+                                                <constraint firstItem="OZK-GJ-BvG" firstAttribute="bottom" secondItem="i2o-nI-cu8" secondAttribute="bottomMargin" id="PfZ-hc-eNy"/>
+                                                <constraint firstItem="OZK-GJ-BvG" firstAttribute="leading" secondItem="TTq-Qq-bHU" secondAttribute="trailing" constant="7" id="UQT-V8-IFn"/>
+                                                <constraint firstItem="77V-Pa-qVx" firstAttribute="leading" secondItem="MLi-th-xej" secondAttribute="trailing" constant="8" id="Zc0-Ri-IuP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="77V-Pa-qVx" secondAttribute="bottom" constant="25.5" id="daN-CE-3M1"/>
                                                 <constraint firstItem="MLi-th-xej" firstAttribute="leading" secondItem="i2o-nI-cu8" secondAttribute="leadingMargin" id="eBa-kF-36q"/>
-                                                <constraint firstItem="77V-Pa-qVx" firstAttribute="top" secondItem="i2o-nI-cu8" secondAttribute="topMargin" id="eRE-8O-SCr"/>
+                                                <constraint firstItem="TTq-Qq-bHU" firstAttribute="top" secondItem="i2o-nI-cu8" secondAttribute="topMargin" constant="25" id="gig-XR-3cf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TTq-Qq-bHU" secondAttribute="bottom" constant="10" id="hKR-ha-Csg"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="MLi-th-xej" secondAttribute="bottom" id="m5o-GO-njc"/>
-                                                <constraint firstItem="TTq-Qq-bHU" firstAttribute="leading" secondItem="MLi-th-xej" secondAttribute="trailing" constant="8" id="ngc-gz-3nq"/>
-                                                <constraint firstItem="77V-Pa-qVx" firstAttribute="leading" secondItem="MLi-th-xej" secondAttribute="trailing" constant="8" id="rwk-IQ-O9J"/>
-                                                <constraint firstItem="OZK-GJ-BvG" firstAttribute="leading" secondItem="77V-Pa-qVx" secondAttribute="trailing" constant="8" id="s5j-nE-fJQ"/>
+                                                <constraint firstItem="OZK-GJ-BvG" firstAttribute="top" secondItem="i2o-nI-cu8" secondAttribute="topMargin" id="xzG-oc-nqx"/>
+                                                <constraint firstItem="OZK-GJ-BvG" firstAttribute="trailing" secondItem="i2o-nI-cu8" secondAttribute="trailingMargin" id="z3W-9t-gdk"/>
+                                                <constraint firstItem="77V-Pa-qVx" firstAttribute="top" secondItem="i2o-nI-cu8" secondAttribute="topMargin" constant="7" id="zce-bB-sqk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -275,7 +279,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FCi-sx-vh0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" badgeValue="5" systemItem="contacts" id="oLy-sg-sIX"/>
+                    <tabBarItem key="tabBarItem" title="Talk" image="icon_chat" id="oLy-sg-sIX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="jm7-jT-prJ" id="IiQ-58-qO4"/>
@@ -469,17 +473,18 @@
             </objects>
             <point key="canvasLocation" x="3602.4000000000001" y="1258.920539730135"/>
         </scene>
-        <!--Setting-->
+        <!--Exit-->
         <scene sceneID="PCs-Xv-Em2">
             <objects>
                 <viewController storyboardIdentifier="IdSettingViewController" id="4zi-0a-ntn" customClass="SettingViewController" customModule="MessengerApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9sh-Xc-Xd1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nPh-AP-OEY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Setting" image="icon_setting" id="QbH-By-FFK"/>
+                    <tabBarItem key="tabBarItem" title="Exit" image="icon_exit" id="faU-dG-YAO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueF-rV-FCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -653,8 +658,8 @@
         <scene sceneID="ljG-yB-m30">
             <objects>
                 <viewController storyboardIdentifier="IdProfileViewController" title="Profile" id="TG8-90-JDU" customClass="ProfileViewController" customModule="MessengerApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" id="4xr-M0-36v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <view key="view" autoresizesSubviews="NO" clipsSubviews="YES" contentMode="right" id="4xr-M0-36v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cew-xJ-Dqo">
@@ -705,7 +710,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jWN-An-m3t"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="icon_profile" id="fyI-YB-fPh"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icon_profile" id="ikj-J5-e6g"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tfCep" destination="LHy-q2-LHC" id="Wjb-vM-wKq"/>
                         <outlet property="tfEmail" destination="mZ5-ET-wha" id="zML-JW-7nV"/>
@@ -730,11 +736,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
-                        <segue destination="kJd-TA-LLz" kind="relationship" relationship="viewControllers" id="Weu-Fn-Cs1"/>
                         <segue destination="VcA-6v-9ji" kind="relationship" relationship="viewControllers" id="o8I-qh-dTl"/>
                         <segue destination="TG8-90-JDU" kind="relationship" relationship="viewControllers" id="muJ-fs-knX"/>
-                        <segue destination="4zi-0a-ntn" kind="relationship" relationship="viewControllers" id="Rlp-Jn-bfe"/>
+                        <segue destination="kJd-TA-LLz" kind="relationship" relationship="viewControllers" id="Weu-Fn-Cs1"/>
                         <segue destination="o5p-de-47k" kind="relationship" relationship="viewControllers" id="T4R-j7-AwQ"/>
+                        <segue destination="4zi-0a-ntn" kind="relationship" relationship="viewControllers" id="Rlp-Jn-bfe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Xb-fq-J5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -761,9 +767,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_chat" width="75" height="75"/>
+        <image name="icon_exit" width="75" height="75"/>
         <image name="icon_map" width="75" height="75"/>
         <image name="icon_profile" width="75" height="75"/>
-        <image name="icon_setting" width="75" height="75"/>
         <image name="logo" width="200" height="184"/>
         <image name="user1" width="110" height="110"/>
         <image name="user2" width="110" height="110"/>
