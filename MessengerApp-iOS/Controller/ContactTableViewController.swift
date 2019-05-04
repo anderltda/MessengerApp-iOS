@@ -19,7 +19,6 @@ class ContactTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Auth.auth().currentUser?.displayName
         listUsers()
     }
 

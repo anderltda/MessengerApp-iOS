@@ -9,26 +9,45 @@
 import UIKit
 import Firebase
 
-class SigninViewController: UIViewController {
+class SigninViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tfFullName: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfPhone: UITextField!
-    
+    @IBOutlet weak var btContinue: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.btContinue.layer.cornerRadius = 10
+        self.tfPhone.delegate = self
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard let phone = textField.text,
+            let rangeOfTextToReplace = Range(range, in: phone) else {
+                return false
+        }
+        
+        let substringToReplace = phone[rangeOfTextToReplace]
+        let count = phone.count - substringToReplace.count + string.count
+        return count <= 11
     }
     
     @IBAction func btCreate(_ sender: UIButton) {
         
+        guard tfEmail.text != "", tfPassword.text != "", self.tfPhone.text != "" else {
+            
+            self.alert(title: "Atenção", message: "Todos os campos são obrigatorios o seu preenchimento!")
+            
+            return
+        }
+        
         Auth.auth().createUser(withEmail: tfEmail.text!, password: tfPassword.text!) { (result, error) in
             if error == nil {
                 
-                var userEntity = UserEntity(context: self.context)
+                let userEntity = UserEntity(context: self.context)
                 userEntity.uid = result?.user.uid
                 userEntity.email = self.tfEmail.text
                 userEntity.name = self.tfFullName.text
@@ -37,26 +56,39 @@ class SigninViewController: UIViewController {
                 do {
                     try self.context.save()
                 } catch {
-                    print(error.localizedDescription)
+                    self.alert(title: "Error", message: error.localizedDescription)
+                    return
                 }
                 
                 self.firestore.collection(self.USER_DEFAULT_APP_FIREBASE)
                     .document(userEntity.uid!)
                     .setData([
-                        "id" : userEntity.uid,
-                        "email" : userEntity.email,
-                        "name" : userEntity.name,
-                        "phone" : userEntity.phone,
+                        "id" : userEntity.uid!,
+                        "email" : userEntity.email!,
+                        "name" : userEntity.name!,
+                        "phone" : userEntity.phone!,
                         "create" : Date()
                         ])
                 
+                self.authorized()
+                
             } else {
-                print(error!)
+                self.alert(title: "Error", message: error!.localizedDescription)
             }
+            
+            self.view.endEditing(true)
         }
+    }
+    
+    func authorized() {
         
-
+        let home = storyboard?.instantiateViewController(withIdentifier: "IdMainTabBarController") as! MainTabBarController
+        
+        navigationController?.pushViewController(home, animated: true)
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }

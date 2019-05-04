@@ -44,6 +44,7 @@ class RESTService {
         }
         
         var urlResquest = URLRequest(url: url)
+        
         urlResquest.httpMethod = "GET"
         
         let task = session.dataTask(with: urlResquest, completionHandler: { (data, response, error) in
@@ -69,22 +70,13 @@ class RESTService {
             }
             
             do {
-                
                 let address = try JSONDecoder().decode(AddressModel.self, from: data)
-                
                 onComplete(address)
-                
             } catch {
                 print(error)
             }
-            
-            
         })
-        
         task.resume()
-        
     }
     
 }
-
-

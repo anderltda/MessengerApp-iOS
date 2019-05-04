@@ -37,6 +37,19 @@ extension UIViewController {
         return firestore
     }
     
+    func alert(title: String, message: String) {
+        
+        let alerta = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alerta.addAction(ok)
+        
+        present(alerta, animated: true, completion: nil)
+    }
+    
     var uid: String {
         return Auth.auth().currentUser!.uid
     }

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tfFullName: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tfNumber: UITextField!
     @IBOutlet weak var tfComplement: UITextField!
     @IBOutlet weak var tfCity: UITextField!
+    @IBOutlet weak var btSend: UIButton!
     
     var addressModel: AddressModel!
     var userModel: UserModel!
@@ -29,8 +30,13 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        self.tfZipCode.delegate = self
+        self.tfPhone.delegate = self
+        
         findByUserFirebaseOrCoreData()
         findByAddressFirebaseOrCoreData()
+        btSend.layer.cornerRadius = 10
     }
     
     func findByUserFirebaseOrCoreData() {
@@ -56,7 +62,7 @@ class ProfileViewController: UIViewController {
                     .addSnapshotListener( includeMetadataChanges: true) { (snapshot, error) in
                         
                         if error != nil {
-                            print(error!)
+                            print ("0 - findByUserFirebaseOrCoreData", error!.localizedDescription)
                         }
                         
                         guard let snapshot = snapshot else {return}
@@ -84,7 +90,7 @@ class ProfileViewController: UIViewController {
             }
             
         } catch {
-            print ("fetch task failed", error)
+            print ("1 - findByUserFirebaseOrCoreData task failed", error.localizedDescription)
         }
         
     }
@@ -118,7 +124,7 @@ class ProfileViewController: UIViewController {
                     .addSnapshotListener( includeMetadataChanges: true) { (snapshot, error) in
                         
                         if error != nil {
-                            print(error!)
+                            print("0 - findByAddressFirebaseOrCoreData task failed", error!.localizedDescription)
                         }
                         
                         guard let snapshot = snapshot else {return}
@@ -166,7 +172,7 @@ class ProfileViewController: UIViewController {
             }
             
         } catch {
-            print ("fetch task failed", error)
+            print("1 - findByAddressFirebaseOrCoreData task failed", error.localizedDescription)
         }
         
     }
@@ -176,6 +182,17 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func btSalvar(_ sender: UIButton) {
+        
+        guard tfFullName.text != "",
+        tfFullName.text != "",
+        tfEmail.text != "",
+        tfPhone.text != "",
+        tfZipCode.text != "",
+        tfNumber.text != ""
+            else {
+                alert(title: "Atenção", message: "Existem campos obrigatórios que não foram preenchidos! Por favor prencher!")
+                return
+        }
         
         if userEntity == nil {
             userEntity = UserEntity(context: context)
@@ -247,10 +264,15 @@ class ProfileViewController: UIViewController {
         view.endEditing(true)
         findByUserFirebaseOrCoreData()
         findByAddressFirebaseOrCoreData()
+        
+        alert(title: "Sucesso", message: "Informações salvo com sucesso!")
     }
     
     @IBAction func btBucarCep(_ sender: UIButton) {
-        
+        self.addressModel = nil
+        self.tfPlace.text = ""
+        self.tfDistrict.text = ""
+        self.tfCity.text = ""
         RESTService.buscarCep(cep: tfZipCode.text!) { (address) in
             self.addressModel = address
             DispatchQueue.main.async {
@@ -259,7 +281,37 @@ class ProfileViewController: UIViewController {
                 self.tfCity.text = "\(self.addressModel.localidade)/\(self.addressModel.uf)"
             }
         }
+    }
+    
+    
+    //MARK: - UITextFieldDelegate
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
+        var maxlength  = 0
+        var count = 0
+        
+        if textField == tfPhone {
+            guard let phone = textField.text,
+                let rangeOfTextToReplace = Range(range, in: phone) else {
+                    return false
+            }
+            let substringToReplace = phone[rangeOfTextToReplace]
+            count = phone.count - substringToReplace.count + string.count
+            maxlength = 11
+        }
+        
+        if textField == tfZipCode {
+            guard let zipCode = textField.text,
+                let rangeOfTextToReplace = Range(range, in: zipCode) else {
+                    return false
+            }
+            let substringToReplace = zipCode[rangeOfTextToReplace]
+            count = zipCode.count - substringToReplace.count + string.count
+            maxlength = 8
+        }
+        
+        return count <= maxlength
     }
 }
 

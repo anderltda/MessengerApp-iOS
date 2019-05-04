@@ -18,13 +18,12 @@ class ContactViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        listUsers()
+        self.navigationItem.hidesBackButton = true
+        listContacts()
     }
     
-    func listUsers() {
+    func listContacts() {
         
         firestoreListener = firestore.collection(USER_DEFAULT_APP_FIREBASE)
             .addSnapshotListener( includeMetadataChanges: true) { (snapshot, error) in
@@ -52,8 +51,6 @@ class ContactViewController: UIViewController {
             let name = data["name"] as! String
             let email = data["email"] as! String
             let phone = data["phone"] as! String
-            //let create = NSDate(timeIntervalSince1970: (data["create"] as! TimeInterval)/1000)
-           // let update = NSDate(timeIntervalSince1970: (data["update"] as! TimeInterval)/1000)
             
             let user = UserModel(id: id, name: name, email: email, phone: phone)
             
@@ -78,7 +75,7 @@ extension ContactViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        let user = userModelList[indexPath.row]
+        _ = userModelList[indexPath.row]
         
         let talk = storyboard?.instantiateViewController(withIdentifier: "IdTalkViewController") as! TalkViewController
         
