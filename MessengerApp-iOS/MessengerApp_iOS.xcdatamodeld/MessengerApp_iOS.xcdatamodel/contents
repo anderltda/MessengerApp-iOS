@@ -5,8 +5,6 @@
         <attribute name="cep" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="complemento" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="create" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="gia" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="ibge" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="localidade" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="logradouro" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,7 +13,6 @@
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uf" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="unidade" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="update" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
@@ -25,10 +22,9 @@
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="update" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AddressEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AddressEntity" positionX="-199.1796875" positionY="72.38671875" width="128" height="285"/>
-        <element name="UserEntity" positionX="-420.8671875" positionY="64.6640625" width="128" height="148"/>
+        <element name="AddressEntity" positionX="-199.1796875" positionY="72.38671875" width="128" height="240"/>
+        <element name="UserEntity" positionX="-420.8671875" positionY="64.6640625" width="128" height="133"/>
     </elements>
 </model>

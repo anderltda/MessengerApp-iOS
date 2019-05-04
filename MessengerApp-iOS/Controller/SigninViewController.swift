@@ -43,10 +43,10 @@ class SigninViewController: UIViewController {
                 self.firestore.collection(self.USER_DEFAULT_APP_FIREBASE)
                     .document(userEntity.uid!)
                     .setData([
-                        "id" : result?.user.uid,
-                        "email" : self.tfEmail.text,
-                        "name" : self.tfFullName.text,
-                        "phone" : self.tfPhone.text,
+                        "id" : userEntity.uid,
+                        "email" : userEntity.email,
+                        "name" : userEntity.name,
+                        "phone" : userEntity.phone,
                         "create" : Date()
                         ])
                 

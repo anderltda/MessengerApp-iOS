@@ -21,5 +21,6 @@ class AddressModel : Codable {
     var localidade: String = ""
     var uf: String = ""
     var number: String!
-    
+    var create: Date!
+    var update: Date!
 }

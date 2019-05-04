@@ -18,7 +18,6 @@ class ExitViewController: UIViewController {
         } catch {
             print(error)
         }
-        let login = storyboard?.instantiateViewController(withIdentifier: "IdViewController") as! ViewController
-        navigationController?.pushViewController(login, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
