@@ -66,6 +66,10 @@ class TalkViewController: UIViewController {
         tableView.reloadData()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @IBAction func btSend(_ sender: UIButton) {
     
         guard let message = tfMessage.text else {return}
@@ -76,7 +80,7 @@ class TalkViewController: UIViewController {
                                 "time" : Date()])
         
         tfMessage.text = ""
-        
+        view.endEditing(true)
     }
     
     

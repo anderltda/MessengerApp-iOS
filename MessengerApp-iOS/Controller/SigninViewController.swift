@@ -52,6 +52,8 @@ class SigninViewController: UIViewController, UITextFieldDelegate {
                 userEntity.email = self.tfEmail.text
                 userEntity.name = self.tfFullName.text
                 userEntity.phone = self.tfPhone.text
+                userEntity.create = Date()
+                userEntity.update = Date()
                 
                 do {
                     try self.context.save()
@@ -67,7 +69,8 @@ class SigninViewController: UIViewController, UITextFieldDelegate {
                         "email" : userEntity.email!,
                         "name" : userEntity.name!,
                         "phone" : userEntity.phone!,
-                        "create" : Date()
+                        "create" : Date(),
+                        "update" : Date()
                         ])
                 
                 self.authorized()

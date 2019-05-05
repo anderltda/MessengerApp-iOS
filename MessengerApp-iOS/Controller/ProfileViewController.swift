@@ -233,6 +233,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             print(error.localizedDescription)
         }
         
+        print(userEntity.create)
+        
         self.firestore.collection(self.USER_DEFAULT_APP_FIREBASE)
             .document(userEntity.uid!)
             .setData([
@@ -240,6 +242,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
                 "email" : userEntity.email!,
                 "name" : userEntity.name!,
                 "phone" : userEntity.phone!,
+                "create" : userEntity.create,
                 "update" : Date()
                 ])
         
