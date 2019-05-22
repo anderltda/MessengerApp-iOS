@@ -9,20 +9,23 @@
 import UIKit
 import Firebase
 
-class TalkViewController: UIViewController {
+class TalkViewController: UIViewController, UITextFieldDelegate {
     
     let collection = "ROOM"
   
     var firestoreListener: ListenerRegistration!
     
+    @IBOutlet weak var dockViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tfMessage: UITextField!
+    @IBOutlet weak var btSend: UIButton!
     
     var chatModelList: [ChatModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Auth.auth().currentUser?.displayName
+        // Delegate text field
+        self.tfMessage.delegate = self
         listUsers()
     }
     
@@ -36,8 +39,6 @@ class TalkViewController: UIViewController {
                 }
                 
                 guard let snapshot = snapshot else {return}
-                
-                print("Total de mudanças: ", snapshot.documentChanges.count)
                 
                 if snapshot.metadata.isFromCache || snapshot.documentChanges.count > 0 {
                     self.showUsers(snapshot: snapshot)
@@ -70,7 +71,11 @@ class TalkViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func btSend(_ sender: UIButton) {
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func sendMessage(_ sender: UIButton) {
     
         guard let message = tfMessage.text else {return}
         
@@ -81,11 +86,36 @@ class TalkViewController: UIViewController {
         
         tfMessage.text = ""
         view.endEditing(true)
+        self.tfMessage.endEditing(true)
     }
     
+    func tableViewTapped() {
+        
+        self.tfMessage.endEditing(true)
+        
+    }
     
+    // MARK: TextField Delegate Methods
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.dockViewHeightConstraint.constant = 380
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.dockViewHeightConstraint.constant = 60
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
 }
 
+
+// MARK: TableView Delegate Methods
 
 extension TalkViewController: UITableViewDataSource {
     
