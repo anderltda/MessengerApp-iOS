@@ -398,43 +398,47 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWC-bM-GFI">
-                                                    <rect key="frame" x="65" y="11" width="237" height="107"/>
+                                                    <rect key="frame" x="35" y="11" width="267" height="107"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS2-ld-U3q">
-                                                            <rect key="frame" x="8" y="8" width="221" height="91"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS2-ld-U3q">
+                                                            <rect key="frame" x="8" y="28" width="251" height="71"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Message">
                                                                     <attributes>
-                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <font key="NSFont" metaFont="smallSystem"/>
+                                                                        <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
+                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmg-ab-ScL">
+                                                            <rect key="frame" x="8" y="8" width="251" height="12"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                            <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="OS2-ld-U3q" secondAttribute="trailing" constant="8" id="4PY-aG-zxd"/>
-                                                        <constraint firstItem="OS2-ld-U3q" firstAttribute="leading" secondItem="MWC-bM-GFI" secondAttribute="leading" constant="8" id="Atx-g4-esf"/>
-                                                        <constraint firstItem="OS2-ld-U3q" firstAttribute="top" secondItem="MWC-bM-GFI" secondAttribute="top" constant="8" id="ERd-H6-VE2"/>
-                                                        <constraint firstAttribute="bottom" secondItem="OS2-ld-U3q" secondAttribute="bottom" constant="8" id="fP8-WK-SeB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Bmg-ab-ScL" secondAttribute="trailing" constant="8" id="1ZK-Lh-DSn"/>
+                                                        <constraint firstAttribute="bottom" secondItem="OS2-ld-U3q" secondAttribute="bottom" constant="8" id="Acq-XL-0ae"/>
+                                                        <constraint firstAttribute="bottom" secondItem="OS2-ld-U3q" secondAttribute="bottom" constant="8" id="NqI-5r-qCX"/>
+                                                        <constraint firstItem="OS2-ld-U3q" firstAttribute="leading" secondItem="MWC-bM-GFI" secondAttribute="leading" constant="8" id="Oq7-yh-ZlX"/>
+                                                        <constraint firstItem="OS2-ld-U3q" firstAttribute="top" secondItem="Bmg-ab-ScL" secondAttribute="bottom" constant="8" id="PRp-6I-NTz"/>
+                                                        <constraint firstItem="OS2-ld-U3q" firstAttribute="leading" secondItem="MWC-bM-GFI" secondAttribute="leading" constant="8" id="bso-qW-KSH"/>
+                                                        <constraint firstItem="Bmg-ab-ScL" firstAttribute="leading" secondItem="MWC-bM-GFI" secondAttribute="leading" constant="8" id="gc3-zl-Mmc"/>
+                                                        <constraint firstItem="Bmg-ab-ScL" firstAttribute="top" secondItem="MWC-bM-GFI" secondAttribute="top" constant="8" id="q1k-pg-49c"/>
+                                                        <constraint firstAttribute="trailing" secondItem="OS2-ld-U3q" secondAttribute="trailing" constant="8" id="sy1-nv-oEd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="OS2-ld-U3q" secondAttribute="trailing" constant="8" id="v6e-cY-NGW"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmg-ab-ScL">
-                                                    <rect key="frame" x="29" y="11" width="28" height="12"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="MWC-bM-GFI" firstAttribute="leading" secondItem="us0-Xf-6Bc" secondAttribute="leadingMargin" constant="50" id="1Y9-H7-AGc"/>
+                                                <constraint firstItem="MWC-bM-GFI" firstAttribute="leading" secondItem="us0-Xf-6Bc" secondAttribute="leadingMargin" constant="20" id="1Y9-H7-AGc"/>
                                                 <constraint firstItem="MWC-bM-GFI" firstAttribute="top" secondItem="us0-Xf-6Bc" secondAttribute="topMargin" id="3WE-fK-vZk"/>
-                                                <constraint firstItem="MWC-bM-GFI" firstAttribute="leading" secondItem="Bmg-ab-ScL" secondAttribute="trailing" constant="8" id="F6d-SG-Sgq"/>
                                                 <constraint firstItem="8dz-Xl-rmW" firstAttribute="leading" secondItem="MWC-bM-GFI" secondAttribute="trailing" constant="8" id="IrB-zX-zEQ"/>
-                                                <constraint firstItem="Bmg-ab-ScL" firstAttribute="top" secondItem="us0-Xf-6Bc" secondAttribute="topMargin" id="JIX-ca-bj2"/>
                                                 <constraint firstItem="8dz-Xl-rmW" firstAttribute="trailing" secondItem="us0-Xf-6Bc" secondAttribute="trailingMargin" id="Znu-g6-S4q"/>
                                                 <constraint firstItem="8dz-Xl-rmW" firstAttribute="leading" secondItem="MWC-bM-GFI" secondAttribute="trailing" constant="8" id="dCh-Fp-5OB"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="MWC-bM-GFI" secondAttribute="bottom" constant="10" id="maH-oE-jSp"/>
@@ -449,11 +453,11 @@
                                             <outlet property="vwMe" destination="MWC-bM-GFI" id="gla-w1-t6t"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="IdYouTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="you" rowHeight="127" id="xBp-uf-HAO" customClass="YouTableViewCell" customModule="MessengerApp_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="181" width="375" height="127"/>
+                                    <tableViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="IdYouTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="you" rowHeight="126" id="xBp-uf-HAO" customClass="YouTableViewCell" customModule="MessengerApp_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="181" width="375" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" tag="1" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xBp-uf-HAO" id="iX5-x8-rXG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="126.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user2" translatesAutoresizingMaskIntoConstraints="NO" id="XKp-Yf-7Jz">
@@ -467,39 +471,50 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="MM0-KU-zjn">
-                                                    <rect key="frame" x="66" y="11" width="250" height="95"/>
+                                                    <rect key="frame" x="66" y="11" width="274" height="94"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZX-mg-Dji">
-                                                            <rect key="frame" x="8" y="8" width="47" height="79"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZX-mg-Dji">
+                                                            <rect key="frame" x="8" y="28" width="258" height="58"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Message">
+                                                                    <attributes>
+                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <font key="NSFont" metaFont="cellTitle"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNI-Rv-Qrc">
+                                                            <rect key="frame" x="8" y="8" width="258" height="12"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="6ZX-mg-Dji" firstAttribute="top" secondItem="MM0-KU-zjn" secondAttribute="top" constant="8" id="8q1-MV-48N"/>
-                                                        <constraint firstAttribute="bottom" secondItem="6ZX-mg-Dji" secondAttribute="bottom" constant="8" id="LVa-Xm-Uuf"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6ZX-mg-Dji" secondAttribute="trailing" constant="20" symbolic="YES" id="Tyx-5t-XCJ"/>
-                                                        <constraint firstItem="6ZX-mg-Dji" firstAttribute="leading" secondItem="MM0-KU-zjn" secondAttribute="leading" constant="8" id="mR7-dN-787"/>
+                                                        <constraint firstItem="6ZX-mg-Dji" firstAttribute="top" secondItem="eNI-Rv-Qrc" secondAttribute="bottom" constant="8" id="77b-09-uVR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="6ZX-mg-Dji" secondAttribute="bottom" constant="8" id="88C-6q-DLN"/>
+                                                        <constraint firstItem="6ZX-mg-Dji" firstAttribute="top" secondItem="eNI-Rv-Qrc" secondAttribute="bottom" constant="8" id="9Xs-Hg-CvY"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6ZX-mg-Dji" secondAttribute="trailing" constant="8" id="Gvw-4c-zpw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6ZX-mg-Dji" secondAttribute="trailing" constant="8" id="d42-oM-vY2"/>
+                                                        <constraint firstItem="eNI-Rv-Qrc" firstAttribute="top" secondItem="MM0-KU-zjn" secondAttribute="top" constant="8" id="hKt-Xj-EE6"/>
+                                                        <constraint firstAttribute="bottom" secondItem="6ZX-mg-Dji" secondAttribute="bottom" constant="8" id="i2s-uK-kmp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="eNI-Rv-Qrc" secondAttribute="trailing" constant="8" id="ifb-Wb-fAH"/>
+                                                        <constraint firstItem="6ZX-mg-Dji" firstAttribute="leading" secondItem="MM0-KU-zjn" secondAttribute="leading" constant="8" id="n47-iE-eX5"/>
+                                                        <constraint firstItem="eNI-Rv-Qrc" firstAttribute="leading" secondItem="MM0-KU-zjn" secondAttribute="leading" constant="8" id="xZ5-UZ-SBE"/>
+                                                        <constraint firstItem="6ZX-mg-Dji" firstAttribute="leading" secondItem="MM0-KU-zjn" secondAttribute="leading" constant="8" id="yKC-uk-M07"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNI-Rv-Qrc">
-                                                    <rect key="frame" x="324" y="11" width="28" height="12"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="MM0-KU-zjn" firstAttribute="top" secondItem="iX5-x8-rXG" secondAttribute="topMargin" id="3LV-K4-jTI"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="MM0-KU-zjn" secondAttribute="bottom" constant="10" id="65Y-PF-qCf"/>
                                                 <constraint firstItem="XKp-Yf-7Jz" firstAttribute="top" secondItem="iX5-x8-rXG" secondAttribute="top" constant="8" id="A6U-hl-lrc"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eNI-Rv-Qrc" secondAttribute="trailing" constant="8" id="Hjm-Lm-fLK"/>
                                                 <constraint firstItem="XKp-Yf-7Jz" firstAttribute="leading" secondItem="iX5-x8-rXG" secondAttribute="leading" constant="8" id="Hnp-he-2cW"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eNI-Rv-Qrc" secondAttribute="trailing" constant="8" id="iT2-En-MVv"/>
-                                                <constraint firstItem="eNI-Rv-Qrc" firstAttribute="leading" secondItem="MM0-KU-zjn" secondAttribute="trailing" constant="8" id="ki9-8V-TdU"/>
-                                                <constraint firstItem="eNI-Rv-Qrc" firstAttribute="top" secondItem="iX5-x8-rXG" secondAttribute="topMargin" id="nQM-Vd-C2H"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MM0-KU-zjn" secondAttribute="trailing" constant="20" id="MZa-Pg-GIE"/>
                                                 <constraint firstItem="MM0-KU-zjn" firstAttribute="leading" secondItem="XKp-Yf-7Jz" secondAttribute="trailing" constant="8" id="wkS-mM-elr"/>
                                             </constraints>
                                         </tableViewCellContentView>
