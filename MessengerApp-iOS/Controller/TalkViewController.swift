@@ -26,7 +26,8 @@ class TalkViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Delegate text field
         self.tfMessage.delegate = self
-        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.btSend.layer.cornerRadius = 10
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         listUsers()
     }
     

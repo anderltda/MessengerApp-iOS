@@ -17,7 +17,6 @@
 		71804FBC227BEBA9008D07DC /* YouTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71804FBB227BEBA9008D07DC /* YouTableViewCell.swift */; };
 		71804FBE227BEBE8008D07DC /* MeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71804FBD227BEBE8008D07DC /* MeTableViewCell.swift */; };
 		71804FC0227BED5A008D07DC /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71804FBF227BED5A008D07DC /* ContactTableViewCell.swift */; };
-		71BA193E2274BD0400DF4AC0 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BA193D2274BD0400DF4AC0 /* ContactTableViewController.swift */; };
 		71CDDFC322790B45001FFCA1 /* UIViewController+CoreDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CDDFC222790B45001FFCA1 /* UIViewController+CoreDate.swift */; };
 		71CDDFC522791464001FFCA1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CDDFC422791464001FFCA1 /* UserModel.swift */; };
 		71D52BFA22769FFB003415DD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52BF922769FFB003415DD /* MainTabBarController.swift */; };
@@ -27,7 +26,6 @@
 		71D52C132276A8C7003415DD /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C082276A8C6003415DD /* TalkViewController.swift */; };
 		71D52C142276A8C7003415DD /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C092276A8C6003415DD /* ContactViewController.swift */; };
 		71D52C162276A8C7003415DD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0B2276A8C6003415DD /* MainTabBarController.swift */; };
-		71D52C172276A8C7003415DD /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0C2276A8C6003415DD /* ContactTableViewController.swift */; };
 		71D52C182276A8C7003415DD /* ExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0D2276A8C7003415DD /* ExitViewController.swift */; };
 		71D52C1A2276A8C7003415DD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C0F2276A8C7003415DD /* AboutViewController.swift */; };
 		71D52C1B2276A8C7003415DD /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D52C102276A8C7003415DD /* LocationViewController.swift */; };
@@ -52,7 +50,6 @@
 		71804FBB227BEBA9008D07DC /* YouTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTableViewCell.swift; sourceTree = "<group>"; };
 		71804FBD227BEBE8008D07DC /* MeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeTableViewCell.swift; sourceTree = "<group>"; };
 		71804FBF227BED5A008D07DC /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
-		71BA193D2274BD0400DF4AC0 /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		71CDDFC222790B45001FFCA1 /* UIViewController+CoreDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreDate.swift"; sourceTree = "<group>"; };
 		71CDDFC422791464001FFCA1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		71D52BF922769FFB003415DD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -62,7 +59,6 @@
 		71D52C082276A8C6003415DD /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
 		71D52C092276A8C6003415DD /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		71D52C0B2276A8C6003415DD /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		71D52C0C2276A8C6003415DD /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		71D52C0D2276A8C7003415DD /* ExitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitViewController.swift; sourceTree = "<group>"; };
 		71D52C0F2276A8C7003415DD /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		71D52C102276A8C7003415DD /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -145,7 +141,6 @@
 			children = (
 				71D52C0F2276A8C7003415DD /* AboutViewController.swift */,
 				71804FBF227BED5A008D07DC /* ContactTableViewCell.swift */,
-				71D52C0C2276A8C6003415DD /* ContactTableViewController.swift */,
 				71D52C092276A8C6003415DD /* ContactViewController.swift */,
 				71D52C0D2276A8C7003415DD /* ExitViewController.swift */,
 				71D98078227A1DB90055FD08 /* LocationTableViewCell.swift */,
@@ -157,7 +152,6 @@
 				71D52C062276A8C6003415DD /* SigninViewController.swift */,
 				71D52C082276A8C6003415DD /* TalkViewController.swift */,
 				71CDDFC222790B45001FFCA1 /* UIViewController+CoreDate.swift */,
-				71BA193D2274BD0400DF4AC0 /* ContactTableViewController.swift */,
 				71804FBB227BEBA9008D07DC /* YouTableViewCell.swift */,
 				71D52BF922769FFB003415DD /* MainTabBarController.swift */,
 				7166CF9422740E7200AF0C77 /* ViewController.swift */,
@@ -326,13 +320,11 @@
 				71D52C012276A1FD003415DD /* ChatModel.swift in Sources */,
 				7166CF9B22740E7200AF0C77 /* MessengerApp_iOS.xcdatamodeld in Sources */,
 				71D52C1B2276A8C7003415DD /* LocationViewController.swift in Sources */,
-				71D52C172276A8C7003415DD /* ContactTableViewController.swift in Sources */,
 				71D52C122276A8C7003415DD /* ProfileViewController.swift in Sources */,
 				71D9807C227A3BCD0055FD08 /* RESTService.swift in Sources */,
 				7166CF9322740E7200AF0C77 /* AppDelegate.swift in Sources */,
 				71D52C112276A8C7003415DD /* SigninViewController.swift in Sources */,
 				71D52C1A2276A8C7003415DD /* AboutViewController.swift in Sources */,
-				71BA193E2274BD0400DF4AC0 /* ContactTableViewController.swift in Sources */,
 				71D52C182276A8C7003415DD /* ExitViewController.swift in Sources */,
 				71804FBE227BEBE8008D07DC /* MeTableViewCell.swift in Sources */,
 				71D52C162276A8C7003415DD /* MainTabBarController.swift in Sources */,

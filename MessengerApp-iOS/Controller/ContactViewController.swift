@@ -20,6 +20,7 @@ class ContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         listContacts()
     }
     

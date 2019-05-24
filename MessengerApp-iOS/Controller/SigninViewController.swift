@@ -19,8 +19,45 @@ class SigninViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.btContinue.layer.cornerRadius = 10
         self.tfPhone.delegate = self
+        layoutChange()
+    }
+    
+    func layoutChange() {
+        
+        self.btContinue.layer.cornerRadius = 10
+        self.tfFullName.layer.cornerRadius = 10
+        self.tfEmail.layer.cornerRadius = 10
+        self.tfPassword.layer.cornerRadius = 10
+        self.tfPhone.layer.cornerRadius = 10
+        
+        let colorWhite = UIColor.white
+        self.tfFullName.layer.borderColor = colorWhite.cgColor
+        self.tfEmail.layer.borderColor = colorWhite.cgColor
+        self.tfPassword.layer.borderColor = colorWhite.cgColor
+        self.tfPhone.layer.borderColor = colorWhite.cgColor
+
+        self.tfFullName.layer.borderWidth = 1.0
+        self.tfEmail.layer.borderWidth = 1.0
+        self.tfPassword.layer.borderWidth = 1.0
+        self.tfPhone.layer.borderWidth = 1.0
+       
+        self.tfFullName.backgroundColor = UIColor.clear
+        self.tfEmail.backgroundColor = UIColor.clear
+        self.tfPassword.backgroundColor = UIColor.clear
+        self.tfPhone.backgroundColor = UIColor.clear
+        
+        self.tfFullName.attributedPlaceholder = NSAttributedString(string: "Full Name",
+                                                           attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        
+        self.tfPassword.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                              attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        
+        self.tfEmail.attributedPlaceholder = NSAttributedString(string: "E-mail",
+                                                           attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        
+        self.tfPhone.attributedPlaceholder = NSAttributedString(string: "Phone XX999999999",
+                                                              attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

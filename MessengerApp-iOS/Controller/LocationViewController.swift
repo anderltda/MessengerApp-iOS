@@ -21,6 +21,7 @@ class LocationViewController: UIViewController {
         
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         listLocation()
     }
     
