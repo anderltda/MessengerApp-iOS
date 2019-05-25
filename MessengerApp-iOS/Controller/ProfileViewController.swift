@@ -223,8 +223,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         addressEntity.cep = tfZipCode.text
         addressEntity.number = tfNumber.text
         addressEntity.complemento = tfComplement.text
-        addressEntity.lat = -23.4834015
-        addressEntity.long = -46.661051
+        addressEntity.lat = -23.559154
+        addressEntity.long = -46.6591443
         addressEntity.update = Date.init()
         
         do {
