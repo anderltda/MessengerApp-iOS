@@ -74,7 +74,10 @@ class LocationViewController: UIViewController {
             address.uf = estado
             address.number = number
             
-            addressModelList.append(address)
+            if self.uid != id {
+                addressModelList.append(address)
+            }
+            
         }
         
         tableView.reloadData()
