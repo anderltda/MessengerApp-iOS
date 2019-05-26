@@ -36,11 +36,15 @@ class ContactViewController: UIViewController {
                 guard let snapshot = snapshot else {return}
                 
                 if snapshot.metadata.isFromCache || snapshot.documentChanges.count > 0 {
+                    
+          
                     self.showUsers(snapshot: snapshot)
                 }
                 
         }
     }
+    
+
     
     func showUsers(snapshot: QuerySnapshot) {
         
@@ -55,7 +59,10 @@ class ContactViewController: UIViewController {
             
             let user = UserModel(id: id, name: name, email: email, phone: phone)
             
-            userModelList.append(user)
+            if self.uid != id {
+                userModelList.append(user)
+            }
+
         }
         
         tableView.reloadData()
@@ -79,6 +86,10 @@ extension ContactViewController: UITableViewDataSource {
         _ = userModelList[indexPath.row]
         
         let talk = storyboard?.instantiateViewController(withIdentifier: "IdTalkViewController") as! TalkViewController
+        
+         let user = userModelList[indexPath.row]
+        
+        talk.userModel = user
         
         navigationController?.pushViewController(talk, animated: true)
 

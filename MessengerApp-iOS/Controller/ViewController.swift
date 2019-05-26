@@ -94,10 +94,6 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    @IBAction func signup(_ sender: Any) {
-        
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }

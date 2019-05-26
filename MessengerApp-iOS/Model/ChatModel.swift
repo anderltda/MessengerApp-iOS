@@ -13,6 +13,8 @@ struct ChatModel: Codable {
     
     var id: String
     var message: String
+    var x: String
+    var y: String
     //var time: Date
     
 }

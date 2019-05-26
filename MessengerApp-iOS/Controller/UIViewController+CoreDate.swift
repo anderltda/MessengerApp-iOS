@@ -51,7 +51,12 @@ extension UIViewController {
     }
     
     var uid: String {
-        return Auth.auth().currentUser!.uid
+        
+        guard let auth = Auth.auth().currentUser else {
+           return ""
+        }
+        
+        return auth.uid
     }
     
     var context: NSManagedObjectContext {

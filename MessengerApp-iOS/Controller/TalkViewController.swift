@@ -20,20 +20,27 @@ class TalkViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfMessage: UITextField!
     @IBOutlet weak var btSend: UIButton!
     
+    var userModel: UserModel!
+    
     var chatModelList: [ChatModel] = []
+    
+    var x: String!
+    var y: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Delegate text field
         self.tfMessage.delegate = self
         self.btSend.layer.cornerRadius = 10
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.x = self.uid + "-" + self.userModel.id
+        self.y = self.userModel.id + "-" + self.uid
         listUsers()
     }
     
     func listUsers() {
         
-        firestoreListener = firestore.collection(collection).order(by: "time", descending: false)
+        firestoreListener = firestore.collection(collection)
+            .order(by: "time", descending: false)
             .addSnapshotListener( includeMetadataChanges: true) { (snapshot, error) in
                 
                 if error != nil {
@@ -48,22 +55,28 @@ class TalkViewController: UIViewController, UITextFieldDelegate {
                 
         }
     }
-    
+
     func showUsers(snapshot: QuerySnapshot) {
+
+        let xx = self.uid + "-" + self.userModel.id
+        let yy = self.userModel.id + "-" + self.uid
         
         chatModelList.removeAll()
         
         for document in snapshot.documents {
+            
             let data = document.data()
             let id = (data["id"] as! String)
             let message = data["message"] as! String
-            // let time = data["time"] as! NSData
-            
-            print(data["time"]!)
-            
-            let chat = ChatModel(id: id, message: message)
-            
-            chatModelList.append(chat)
+            let x = (data["x"] as! String)
+            let y = (data["y"] as! String)
+            //let time = data["time"] as! NSData
+            //print(data["time"]!)
+
+            if (xx == x) || (yy == y) || (xx == y) || (yy == x){
+                chatModelList.append(ChatModel(id: id, message: message, x: x, y: y))
+            }
+
         }
         
         tableView.reloadData()
@@ -84,6 +97,8 @@ class TalkViewController: UIViewController, UITextFieldDelegate {
         firestore.collection(collection)
             .addDocument(data: ["id" : uid,
                                 "message" : message,
+                                "x": self.x!,
+                                "y": self.y!,
                                 "time" : Date()])
         
         tfMessage.text = ""
